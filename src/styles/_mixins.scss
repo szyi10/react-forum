@@ -1,0 +1,32 @@
+@import "./variables";
+
+// Breakpoints
+@mixin smScreen {
+  @media (max-width: #{$screen-sm}) {
+    @content;
+  }
+}
+
+@mixin mdScreen {
+  @media (max-width: #{$screen-md}) {
+    @content;
+  }
+}
+
+@mixin lgScreen {
+  @media (max-width: #{$screen-lg}) {
+    @content;
+  }
+}
+
+@mixin xlScreen {
+  @media (max-width: #{$screen-xl}) {
+    @content;
+  }
+}
+
+@mixin xxlScreen {
+  @media (max-width: #{$screen-xxl}) {
+    @content;
+  }
+}

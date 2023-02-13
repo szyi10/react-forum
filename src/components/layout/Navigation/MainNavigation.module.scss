@@ -1,0 +1,112 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+@import "../../../styles/animations";
+
+.header {
+  position: relative;
+  width: 100%;
+  padding: 20px 10%;
+  background-color: $darkColor2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+
+  @include smScreen {
+    padding: 20px 10px;
+  }
+}
+
+.logo {
+  img {
+    height: 3.25rem;
+
+    @include smScreen {
+      height: 1.39rem;
+    }
+  }
+  // font-size: 1.5rem;
+
+  // @include smScreen {
+  //   font-size: 0.6rem;
+  // }
+}
+
+.nav {
+  @include smScreen {
+    z-index: -1;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+
+    &.desktop {
+      display: flex;
+    }
+
+    &.mobile {
+      display: none;
+    }
+
+    @include smScreen {
+      &.desktop {
+        display: none;
+      }
+
+      &.mobile {
+        display: flex;
+      }
+
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -225%;
+      padding-bottom: 1rem;
+      flex-direction: column;
+      align-items: center;
+
+      background-color: $darkColor2;
+
+      -webkit-animation: slide-in-top 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94)
+        both;
+      animation: slide-in-top 0.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+    }
+  }
+
+  li {
+    margin-left: 1.5rem;
+    font-size: 1.25rem;
+
+    @include smScreen {
+      margin-left: 0;
+      font-size: 1.5rem;
+      margin-top: 1rem;
+    }
+  }
+
+  a {
+    text-decoration: inherit;
+    color: $lightColor2;
+  }
+
+  a:hover,
+  a:active,
+  [aria-current="page"] {
+    color: $lightColor1;
+  }
+}
+
+.menu {
+  display: none;
+
+  @include smScreen {
+    display: flex;
+  }
+
+  img {
+    width: 1.5rem;
+    height: 1.5rem;
+    object-fit: contain;
+  }
+}

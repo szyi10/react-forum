@@ -1,0 +1,16 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.comments {
+  text-align: center;
+  color: $lightColor1;
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  button,
+  a {
+    margin: 1.25rem 0 2rem;
+  }
+}

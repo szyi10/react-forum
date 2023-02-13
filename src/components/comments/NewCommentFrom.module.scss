@@ -1,0 +1,54 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.form {
+  margin-top: 1rem;
+  text-align: center;
+
+  .control {
+    margin-bottom: 0.5rem;
+
+    label {
+      font-weight: 500;
+      font-size: 1.25rem;
+      display: block;
+      margin-bottom: 0.5rem;
+      color: $lightColor2;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    input,
+    textarea {
+      font: inherit;
+      color: $lightColor1;
+      padding: 0.35rem;
+      border-radius: 4px;
+      background-color: $darkColor2;
+      border: none;
+      display: block;
+      width: 100%;
+      font-size: 1.25rem;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline-color: $primaryHover;
+    }
+  }
+
+  .actions {
+    text-align: right;
+
+    button {
+      margin-top: 0.5rem;
+      font-size: 1.125rem;
+
+      @include smScreen {
+        width: 100%;
+      }
+    }
+  }
+}

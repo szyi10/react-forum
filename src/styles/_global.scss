@@ -1,0 +1,32 @@
+@import "../styles/variables";
+@import "../styles/fonts";
+@import "./buttons";
+@import "./animations";
+
+:root {
+  color-scheme: dark;
+}
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: $lightColor1;
+  background-color: $darkColor1;
+  @include primaryFont();
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+.centered {
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

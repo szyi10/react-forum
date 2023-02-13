@@ -1,0 +1,77 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.reset {
+  background: $darkColor2;
+  color: $lightColor1;
+  border-radius: 6px;
+  padding: 3rem;
+  margin: 3rem auto;
+  max-width: $screen-sm;
+
+  @include smScreen {
+    padding: 2rem 1.5rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: $lightColor1;
+  }
+
+  form {
+    margin-top: 1.5rem;
+  }
+
+  p {
+    text-align: center;
+    margin-top: 0.5rem;
+    color: $lightColor1;
+  }
+
+  a {
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $lightColor1;
+  }
+
+  .control {
+    label {
+      font-weight: 500;
+      font-size: 1.25rem;
+      display: block;
+      margin-bottom: 0.5rem;
+      color: $lightColor2;
+    }
+
+    input,
+    textarea {
+      font: inherit;
+      color: $lightColor1;
+      padding: 0.35rem;
+      border-radius: 4px;
+      background-color: $darkColor1;
+      border: none;
+      display: block;
+      width: 100%;
+      font-size: 1.25rem;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline-color: $primaryHover;
+    }
+  }
+
+  .actions {
+    button {
+      width: 100%;
+      margin-top: 1rem;
+      font-size: 1.125rem;
+    }
+
+    text-align: center;
+  }
+}

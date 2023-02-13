@@ -1,0 +1,49 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.user {
+  background: $darkColor2;
+  color: $lightColor1;
+  border-radius: 6px;
+  padding: 3rem;
+  margin: 3rem auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include smScreen {
+    padding: 2rem 1.5rem;
+  }
+
+  .img {
+    width: 8rem;
+    height: 8rem;
+    border-radius: 6px;
+    background-color: $darkColor1;
+    object-fit: cover;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin: 1rem 0 0.25rem;
+    word-break: break-all;
+    text-align: center;
+
+    @include smScreen {
+      font-size: 1.75rem;
+    }
+  }
+
+  p {
+    font-size: 0.875rem;
+    color: $lightColor2;
+
+    @include smScreen {
+      font-size: 0.75rem;
+    }
+  }
+
+  a {
+    margin-top: 1.5rem;
+  }
+}

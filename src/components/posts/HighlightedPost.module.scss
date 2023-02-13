@@ -1,0 +1,41 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.post {
+  background: $darkColor2;
+  color: $lightColor1;
+  border-radius: 6px;
+  padding: 3rem;
+  margin: 3rem auto;
+  width: 100%;
+
+  @include smScreen {
+    padding: 2rem 1.5rem;
+    width: 100%;
+  }
+
+  h1 {
+    font-size: 2.5rem;
+
+    @include smScreen {
+      font-size: 1.25rem;
+    }
+  }
+
+  p {
+    font-size: 1.5rem;
+    text-align: justify;
+
+    @include smScreen {
+      font-size: 1.125rem;
+    }
+  }
+
+  figcaption {
+    font-style: italic;
+    font-size: 1rem;
+    text-align: left;
+    color: $lightColor2;
+    margin-bottom: 0.75rem;
+  }
+}

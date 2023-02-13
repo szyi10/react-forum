@@ -1,0 +1,50 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.item {
+  margin: 1rem 0;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.2);
+  border-radius: 6px;
+  background-color: $darkColor2;
+
+  @include smScreen {
+    flex-direction: column;
+
+    a {
+      width: 100%;
+      margin-top: 1rem;
+      text-align: center;
+    }
+  }
+
+  figure {
+    margin: 0;
+    padding: 0;
+    width: 70%;
+
+    @include smScreen {
+      width: 100%;
+    }
+  }
+
+  blockquote {
+    margin: 0;
+    text-align: left;
+    font-size: 1.5rem;
+    color: $lightColor1;
+  }
+
+  p {
+    margin: 0;
+    margin-bottom: 0.25rem;
+  }
+
+  figcaption {
+    font-style: italic;
+    color: $lightColor2;
+  }
+}

@@ -1,0 +1,94 @@
+%btn {
+  text-decoration: inherit;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  color: inherit;
+  cursor: pointer;
+  transition: border-color 0.25s;
+
+  &:focus,
+  &:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+  }
+}
+
+.btn-dark1 {
+  @extend %btn;
+
+  background-color: $darkColor1;
+
+  &:hover {
+    border-color: $primaryColor;
+  }
+}
+
+.btn-dark2 {
+  @extend %btn;
+
+  background-color: $darkColor2;
+
+  &:hover {
+    border-color: $primaryColor;
+  }
+}
+
+.btn-dark2-text {
+  @extend %btn;
+
+  color: $lightColor2;
+  background-color: $darkColor2;
+
+  transition: color 0.25s;
+
+  &:hover {
+    color: $lightColor1;
+    border-color: none;
+  }
+
+  &:focus,
+  &:focus-visible {
+    outline: none;
+    color: $lightColor1;
+  }
+}
+
+.btn-primary {
+  @extend %btn;
+  background-color: $primaryColor;
+
+  &:hover {
+    border-color: $lightColor1;
+  }
+}
+
+.btn-primary-reversed {
+  @extend %btn;
+  background-color: none;
+  transition: background-color 0.25s;
+
+  &:hover {
+    background-color: $primaryColor;
+  }
+}
+
+.btn-warning {
+  @extend %btn;
+  background-color: $warningColor;
+
+  &:hover {
+    border-color: $lightColor1;
+  }
+}
+
+.btn-success {
+  @extend %btn;
+  background-color: $successColor;
+
+  &:hover {
+    border-color: $lightColor1;
+  }
+}

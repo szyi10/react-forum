@@ -1,0 +1,21 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.noposts {
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  p {
+    color: $lightColor1;
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+
+    @include smScreen {
+      font-size: 1.85rem;
+    }
+  }
+}

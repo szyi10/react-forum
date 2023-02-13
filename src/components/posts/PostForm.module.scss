@@ -1,0 +1,60 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.card {
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba($color: #000000, $alpha: 0.2);
+  border-radius: 6px;
+  background-color: $darkColor2;
+}
+
+.form {
+  position: relative;
+
+  .control {
+    margin-bottom: 0.5rem;
+
+    label {
+      font-weight: 500;
+      font-size: 1.25rem;
+      display: block;
+      margin-bottom: 0.5rem;
+      color: $lightColor1;
+    }
+
+    textarea {
+      resize: vertical;
+    }
+
+    input,
+    textarea {
+      font: inherit;
+      color: $lightColor1;
+      padding: 0.35rem;
+      border-radius: 4px;
+      background-color: $darkColor1;
+      border: none;
+      display: block;
+      width: 100%;
+      font-size: 1.25rem;
+    }
+
+    input:focus,
+    textarea:focus {
+      outline-color: $primaryHover;
+    }
+  }
+
+  .actions {
+    text-align: right;
+
+    button {
+      margin-top: 0.5rem;
+      font-size: 1.125rem;
+
+      @include smScreen {
+        width: 100%;
+      }
+    }
+  }
+}
